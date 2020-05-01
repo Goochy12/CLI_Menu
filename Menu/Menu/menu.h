@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-//#include "../MenuItem/menuItem.h"
+#include "../MenuItem/menuItem.h"
 #include <vector>
 
 typedef MenuItem T;
@@ -16,7 +16,7 @@ private:
 
 
 public:
-	Menu(std::vector<T> menuItems);
+	Menu();
 	~Menu();
 
 	std::vector<T> getMenuItems();

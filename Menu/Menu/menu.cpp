@@ -1,11 +1,9 @@
 #include "menu.h"
-//#include "../MenuItem/menuItem.h"
+#include "../MenuItem/menuItem.h"
 #include <vector>
 
-Menu::Menu(std::vector<T> menuItems) {
+Menu::Menu() {
 	system("cls");
-
-	this->menuItems = &menuItems;
 
 }
 
