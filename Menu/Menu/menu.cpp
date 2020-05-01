@@ -1,4 +1,5 @@
 #include "menu.h"
+//#include "../MenuItem/menuItem.h"
 #include <vector>
 
 Menu::Menu(std::vector<T> menuItems) {
@@ -19,6 +20,11 @@ void setMenuItems(std::vector<T>) {};
 void addMenuItem(T) {};
 void removeMenuItem() {};
 
-T getMenuItemFromIndex(int index);
-
-std::string getMenuItemDisplayName(int index);
+//T Menu::getMenuItemFromIndex(int index) {
+//	return menuItems->at(index);
+//}
+//
+//std::string Menu::getMenuItemDisplayName(int index) {
+//	MenuItem item = menuItems->at(index);
+//	return item.getItemName();
+//}

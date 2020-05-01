@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
+//#include "../MenuItem/menuItem.h"
 #include <vector>
 
-typedef int T;
+typedef MenuItem T;
 
 class Menu
 {
@@ -23,8 +24,8 @@ public:
 	void addMenuItem(T);
 	void removeMenuItem();
 
-	T getMenuItemFromIndex(int index);
+	//T getMenuItemFromIndex(int index);
 
-	std::string getMenuItemDisplayName(int index);
+	//std::string getMenuItemDisplayName(int index);
 };
 
