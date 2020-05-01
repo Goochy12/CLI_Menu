@@ -138,11 +138,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="menu.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuItem\menuItem.cpp" />
+    <ClCompile Include="Menu\menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menu.h" />
+    <ClInclude Include="MenuItem\menuItem.h" />
+    <ClInclude Include="Menu\menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

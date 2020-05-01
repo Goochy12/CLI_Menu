@@ -13,18 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{065de3ee-f2de-4026-a262-da1564db0348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MenuItem">
+      <UniqueIdentifier>{24b43428-3189-4052-bee1-68b15e2c19f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Menu\menu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuItem\menuItem.cpp">
+      <Filter>MenuItem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menu.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Menu\menu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuItem\menuItem.h">
+      <Filter>MenuItem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
