@@ -7,12 +7,12 @@ typedef int T;
 class MenuItem
 {
 private:
-	std::string *itemName;
+	std::string itemName;
 	bool optionToggle;
 	std::string itemStatus;
 
-	char *keypress;
-	std::string *keypressDisplay;
+	char keypress;
+	std::string keypressDisplay;
 
 public:
 	MenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress);

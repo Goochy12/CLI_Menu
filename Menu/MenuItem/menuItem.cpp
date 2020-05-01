@@ -1,7 +1,11 @@
 #include "menuItem.h"
 
 MenuItem::MenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress) {
-	this->itemName = &itemName;
+	this->itemName = itemName;
+	this->keypressDisplay = itemKeypressDispay;
+	this->optionToggle = itemToggle;
+	this->itemStatus = itemStatus;
+	this->keypress = itemKeypress;
 }
 
 MenuItem::~MenuItem() {
@@ -9,10 +13,10 @@ MenuItem::~MenuItem() {
 }
 
 std::string MenuItem::getItemName() {
-	return *itemName;
+	return itemName;
 }
 void MenuItem::setItemName(std::string newItemName) {
-	itemName = &newItemName;
+	itemName = newItemName;
 }
 
 bool MenuItem::getOptionToggle() {
@@ -31,15 +35,15 @@ void MenuItem::setItemStatus(std::string newItemStatus) {
 
 
 char MenuItem::getItemKeypress() {
-	return *keypress;
+	return keypress;
 }
 void MenuItem::setItemKeypress(char newKeypress) {
-	keypress = &newKeypress;
+	keypress = newKeypress;
 }
 
 std::string MenuItem::getKeypressDisplay() {
-	return *keypressDisplay;
+	return keypressDisplay;
 }
 void MenuItem::setKeypressDisplay(std::string newKeypressDisplay) {
-	keypressDisplay = &newKeypressDisplay;
+	keypressDisplay = newKeypressDisplay;
 }
