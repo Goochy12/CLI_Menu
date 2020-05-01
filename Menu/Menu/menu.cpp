@@ -47,7 +47,6 @@ void Menu::display() {
 	//calculate number of "=" minus the title
 
 	char keyPressed = '1';
-	std::vector<T> menuItems = getMenuItems();
 
 	while (keyPressed != '0') {
 		system("cls");
