@@ -7,7 +7,12 @@ typedef int T;
 class Menu
 {
 private:
+	std::string menuTitle;
+	std::string menuGreeting;
+	std::string exitMessage;
+
 	std::vector<T>* menuItems;
+
 
 public:
 	Menu(std::vector<T> menuItems);
