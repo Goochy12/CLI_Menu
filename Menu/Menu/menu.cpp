@@ -12,16 +12,16 @@ Menu::~Menu() {
 
 }
 
-std::vector<MenuItem*> Menu::getMenuItems() {
+std::vector<Menu::T*> Menu::getMenuItems() {
 	return menuItems;
 };
 
-void Menu::setMenuItems(std::vector<MenuItem*> listOfItems) {
+void Menu::setMenuItems(std::vector<T*> listOfItems) {
 	menuItems = listOfItems;
 };
 
 void Menu::addMenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress) {
-	MenuItem* item = new MenuItem(itemName, itemKeypressDispay, itemToggle, itemStatus, itemKeypress);
+	T* item = new T(itemName, itemKeypressDispay, itemToggle, itemStatus, itemKeypress);
 	menuItems.push_back(item);
 };
 
@@ -29,11 +29,11 @@ void Menu::removeMenuItem(int index) {
 	menuItems.erase(menuItems.begin() + index);
 };
 
-MenuItem Menu::getMenuItemFromIndex(int index) {
+Menu::T Menu::getMenuItemFromIndex(int index) {
 	return *menuItems.at(index);
 }
 
 std::string Menu::getMenuItemDisplayName(int index) {
-	MenuItem item = *menuItems.at(index);
+	T item = *menuItems.at(index);
 	return item.getItemName();
 }
