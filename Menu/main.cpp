@@ -9,7 +9,6 @@ int main() {
 	menu.addMenuItem("Menu Item 1", "Numpad 1", false, "OFF", 1);
 	menu.addMenuItem("Longer menu Item Menu Item 2", "Numpad 1", false, "OFF", 1);
 
-
 	menu.display();
 
 	return 0;

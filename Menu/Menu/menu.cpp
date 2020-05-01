@@ -41,23 +41,34 @@ std::string Menu::getMenuItemDisplayName(int index) {
 }
 
 void Menu::display() {
-	system("cls");
-
-	//resize window
+	//resize window - SetConsoleWindowInfo
 	//restrict window resize by user
 	//calculate window width %
 	//calculate number of "=" minus the title
 
-	std::cout << "========== " << title << " ==========" << std::endl;
-	std::cout << std::endl;
-	std::cout << greeting << std::endl;
-	std::cout << std::endl;
+	char keyPressed = 0;
 
-	std::vector<T> menuItems = getMenuItems();
+	while (keyPressed != -1) {
+		system("cls");
 
-	for (int i = 0; i < menuItems.size(); i++) {
-		//display the menu item
-		std::cout << "< " << menuItems.at(i).getItemStatus() << " >" << "\t" << menuItems.at(i).getKeypressDisplay() << " - " << menuItems.at(i).getItemName();
+		std::cout << "========== " << title << " ==========" << std::endl;
 		std::cout << std::endl;
+		std::cout << greeting << std::endl;
+		std::cout << std::endl;
+
+		std::vector<T> menuItems = getMenuItems();
+
+		for (int i = 0; i < menuItems.size(); i++) {
+			//display the menu item
+			std::cout << "< " << menuItems.at(i).getItemStatus() << " >" << "\t" << menuItems.at(i).getKeypressDisplay() << " - " << menuItems.at(i).getItemName();
+			std::cout << std::endl;
+		}
+
+		std::cin >> keyPressed;
+		for (int i = 0; i < menuItems.size(); i++) {
+			if (keyPressed == menuItems.at(i).getItemKeypress()) {
+				//execute some function
+			}
+		}
 	}
 }
