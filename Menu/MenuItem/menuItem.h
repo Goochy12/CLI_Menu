@@ -22,6 +22,6 @@ public:
 	void setOptionToggle(bool newToggle);
 	
 	std::string getItemStatus();
-	void setItemStatus(std::string newStatus);
+	void setItemStatus(std::string newItemStatus);
 };
 

@@ -16,15 +16,15 @@ void MenuItem::setItemName(std::string newItemName) {
 }
 
 bool MenuItem::getOptionToggle() {
-
+	return optionToggle;
 }
 void MenuItem::setOptionToggle(bool newToggle) {
-
+	optionToggle = newToggle;
 }
 
 std::string MenuItem::getItemStatus() {
-
+	return itemStatus;
 }
-void MenuItem::setItemStatus(std::string newStatus) {
-
+void MenuItem::setItemStatus(std::string newItemStatus) {
+	itemStatus = newItemStatus;
 }
