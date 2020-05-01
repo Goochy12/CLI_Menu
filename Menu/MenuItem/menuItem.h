@@ -11,6 +11,9 @@ private:
 	bool optionToggle;
 	std::string itemStatus;
 
+	char *keypress;
+	std::string *keypressDisplay;
+
 public:
 	MenuItem(std::string itemName);
 	~MenuItem();
@@ -23,5 +26,12 @@ public:
 	
 	std::string getItemStatus();
 	void setItemStatus(std::string newItemStatus);
+
+
+	char getItemKeypress();
+	void setItemKeypress(char newKeypress);
+
+	std::string getKeypressDisplay();
+	void setKeypressDisplay(std::string newKeypressDisplay);
 };
 

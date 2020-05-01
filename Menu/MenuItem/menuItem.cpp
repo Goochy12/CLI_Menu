@@ -28,3 +28,18 @@ std::string MenuItem::getItemStatus() {
 void MenuItem::setItemStatus(std::string newItemStatus) {
 	itemStatus = newItemStatus;
 }
+
+
+char MenuItem::getItemKeypress() {
+	return *keypress;
+}
+void MenuItem::setItemKeypress(char newKeypress) {
+	keypress = &newKeypress;
+}
+
+std::string MenuItem::getKeypressDisplay() {
+	return *keypressDisplay;
+}
+void MenuItem::setKeypressDisplay(std::string newKeypressDisplay) {
+	keypressDisplay = &newKeypressDisplay;
+}
