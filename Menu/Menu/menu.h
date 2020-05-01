@@ -23,9 +23,9 @@ public:
 	void addMenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress);
 	void removeMenuItem(int index);
 
-	T* getMenuItemFromIndex(int index);
+	T getMenuItemFromIndex(int index);
 
-	std::string* getMenuItemDisplayName(int index);
+	std::string getMenuItemDisplayName(int index);
 
 	void display();
 };

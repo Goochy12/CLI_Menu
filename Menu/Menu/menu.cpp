@@ -31,13 +31,13 @@ void Menu::removeMenuItem(int index) {
 	menuItems.erase(menuItems.begin() + index);
 };
 
-Menu::T* Menu::getMenuItemFromIndex(int index) {
-	return &menuItems.at(index);
+Menu::T Menu::getMenuItemFromIndex(int index) {
+	return menuItems.at(index);
 }
 
-std::string* Menu::getMenuItemDisplayName(int index) {
+std::string Menu::getMenuItemDisplayName(int index) {
 	T item = menuItems.at(index);
-	return &item.getItemName();
+	return item.getItemName();
 }
 
 void Menu::display() {
