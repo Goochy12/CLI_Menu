@@ -8,15 +8,15 @@ typedef MenuItem T;
 class Menu
 {
 private:
-	std::string menuTitle;
-	std::string menuGreeting;
-	std::string exitMessage;
+	std::string *title;
+	std::string *greeting;
+	std::string *exitMessage;
 
 	std::vector<T>* menuItems;
 
 
 public:
-	Menu();
+	Menu(std::string title, std::string greeting, std::string exitMessage);
 	~Menu();
 
 	std::vector<T> getMenuItems();
@@ -24,8 +24,8 @@ public:
 	void addMenuItem(T);
 	void removeMenuItem();
 
-	//T getMenuItemFromIndex(int index);
+	T getMenuItemFromIndex(int index);
 
-	//std::string getMenuItemDisplayName(int index);
+	std::string getMenuItemDisplayName(int index);
 };
 

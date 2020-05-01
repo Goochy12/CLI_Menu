@@ -2,9 +2,10 @@
 #include "../MenuItem/menuItem.h"
 #include <vector>
 
-Menu::Menu() {
-	system("cls");
-
+Menu::Menu(std::string title, std::string greeting, std::string exitMessage) {
+	this->title = &title;
+	this->greeting = &greeting;
+	this->exitMessage = &exitMessage;
 }
 
 Menu::~Menu() {
