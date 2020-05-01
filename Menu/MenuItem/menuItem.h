@@ -15,7 +15,7 @@ private:
 	std::string *keypressDisplay;
 
 public:
-	MenuItem(std::string itemName);
+	MenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress);
 	~MenuItem();
 
 	std::string getItemName();

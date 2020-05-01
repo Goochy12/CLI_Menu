@@ -1,6 +1,6 @@
 #include "menuItem.h"
 
-MenuItem::MenuItem(std::string itemName) {
+MenuItem::MenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress) {
 	this->itemName = &itemName;
 }
 
