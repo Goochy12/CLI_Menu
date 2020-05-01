@@ -12,11 +12,11 @@ Menu::~Menu() {
 
 }
 
-std::vector<T*> Menu::getMenuItems() {
+std::vector<MenuItem*> Menu::getMenuItems() {
 	return menuItems;
 };
 
-void Menu::setMenuItems(std::vector<T*> listOfItems) {
+void Menu::setMenuItems(std::vector<MenuItem*> listOfItems) {
 	menuItems = listOfItems;
 };
 
@@ -29,11 +29,11 @@ void Menu::removeMenuItem(int index) {
 	menuItems.erase(menuItems.begin() + index);
 };
 
-T Menu::getMenuItemFromIndex(int index) {
+MenuItem Menu::getMenuItemFromIndex(int index) {
 	return *menuItems.at(index);
 }
 
 std::string Menu::getMenuItemDisplayName(int index) {
-	T item = *menuItems.at(index);
+	MenuItem item = *menuItems.at(index);
 	return item.getItemName();
 }
