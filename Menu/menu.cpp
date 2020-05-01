@@ -11,3 +11,8 @@ Menu::Menu(std::vector<T> menuItems) {
 Menu::~Menu() {
 
 }
+
+std::vector<T> getMenuItems() {};
+void setMenuItems(std::vector<T>) {};
+void addMenuItem(T) {};
+void removeMenuItem() {};
