@@ -35,5 +35,8 @@ public:
 
 	std::string getKeypressDisplay();
 	void setKeypressDisplay(std::string newKeypressDisplay);
+
+	std::vector<std::string> getOtherDisplayItems();
+	void setOtherDisplayItems(std::vector<std::string> otherDisplayItems);
 };
 
