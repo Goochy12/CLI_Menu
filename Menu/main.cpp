@@ -5,8 +5,8 @@
 int main() {
 
 	Menu menu("Example Title", "Welcome to my Menu!", "Goodbye!");
-	menu.addMenuItem('1', {"Test 1"});
-	menu.addMenuItem('2', {"Test 2"});
+	menu.addMenuItem(false, "OFF", '1', {"Test 1"});
+	menu.addMenuItem(false, "OFF", '2', {"Test 2"});
 
 	menu.display();
 

@@ -20,7 +20,7 @@ public:
 
 	std::vector<T> getMenuItems();
 	void setMenuItems(std::vector<T> listOfItems);
-	void addMenuItem(char itemKeypress, std::vector<std::string> otherDisplayItems);
+	void addMenuItem(bool toggle, std::string toggleDisplay, char itemKeypress, std::vector<std::string> otherDisplayItems);
 	void removeMenuItem(int index);
 
 	T getMenuItemFromIndex(int index);

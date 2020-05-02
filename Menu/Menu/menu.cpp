@@ -22,8 +22,8 @@ void Menu::setMenuItems(std::vector<T> listOfItems) {
 	menuItems = listOfItems;
 };
 
-void Menu::addMenuItem(char itemKeypress, std::vector<std::string> otherDisplayItems) {
-	T item(itemKeypress, otherDisplayItems);
+void Menu::addMenuItem(bool toggle, std::string toggleDisplay, char itemKeypress, std::vector<std::string> otherDisplayItems) {
+	T item(toggle, toggleDisplay, itemKeypress, otherDisplayItems);
 	menuItems.push_back(item);
 };
 
@@ -52,6 +52,7 @@ void Menu::display() {
 		for (int i = 0; i < menuItems.size(); i++) {
 			//build an output string
 			std::string output;
+			output = "< " + menuItems.at(i).getItemToggleDisplay() + " > \t";
 			output += menuItems.at(i).getItemKeypress();
 			output += " - ";
 			for (int j = 0; j < menuItems.at(i).getOtherDisplayItems().size(); j++) {
