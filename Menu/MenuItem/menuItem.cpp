@@ -1,11 +1,10 @@
 #include "menuItem.h"
 
-MenuItem::MenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress) {
+MenuItem::MenuItem(std::string itemName, std::string itemKeypressDispay, char itemKeypress, std::vector<std::string> otherDisplayItems) {
 	this->itemName = itemName;
 	this->keypressDisplay = itemKeypressDispay;
-	this->optionToggle = itemToggle;
-	this->itemStatus = itemStatus;
 	this->keypress = itemKeypress;
+	this->otherDisplayItems = otherDisplayItems;
 }
 
 MenuItem::~MenuItem() {

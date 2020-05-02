@@ -14,8 +14,10 @@ private:
 	char keypress;
 	std::string keypressDisplay;
 
+	std::vector<std::string> otherDisplayItems;
+
 public:
-	MenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress);
+	MenuItem(std::string itemName, std::string itemKeypressDispay, char itemKeypress, std::vector<std::string> otherDisplayItems);
 	~MenuItem();
 
 	std::string getItemName();
