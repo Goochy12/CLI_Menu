@@ -22,8 +22,8 @@ void Menu::setMenuItems(std::vector<T> listOfItems) {
 	menuItems = listOfItems;
 };
 
-void Menu::addMenuItem(std::string itemName, std::string itemKeypressDispay, bool itemToggle, std::string itemStatus, char itemKeypress) {
-	T item(itemName, itemKeypressDispay, itemToggle, itemStatus, itemKeypress);
+void Menu::addMenuItem(char itemKeypress, std::vector<std::string> otherDisplayItems) {
+	T item(itemKeypress, otherDisplayItems);
 	menuItems.push_back(item);
 };
 
@@ -35,20 +35,12 @@ Menu::T Menu::getMenuItemFromIndex(int index) {
 	return menuItems.at(index);
 }
 
-std::string Menu::getMenuItemDisplayName(int index) {
-	T item = menuItems.at(index);
-	return item.getItemName();
-}
-
 void Menu::display() {
 	//resize window - SetConsoleWindowInfo
 	//restrict window resize by user
 	//calculate window width %
 	//calculate number of "=" minus the title
 
-	char keyPressed = '1';
-
-	while (keyPressed != '0') {
 		system("cls");
 
 		std::cout << "========== " << title << " ==========" << std::endl;
@@ -56,25 +48,17 @@ void Menu::display() {
 		std::cout << greeting << std::endl;
 		std::cout << std::endl;
 
-
+		std::vector<std::string> stringOutputs;	//initialise a vector of string outputs
 		for (int i = 0; i < menuItems.size(); i++) {
-			//display the menu item
-			std::cout << "< " << menuItems.at(i).getItemStatus() << " >" << "\t" << menuItems.at(i).getKeypressDisplay() << " - " << menuItems.at(i).getItemName();
-			std::cout << std::endl;
-		}
-
-		std::cin >> keyPressed;
-		for (int i = 0; i < menuItems.size(); i++) {
-			if (keyPressed == menuItems.at(i).getItemKeypress()) {
-				//execute some function
-				menuItems.at(i).setOptionToggle(!menuItems.at(i).getOptionToggle());
-				if (menuItems.at(i).getOptionToggle()) {
-					menuItems.at(i).setItemStatus("ON");
-				}
-				else {
-					menuItems.at(i).setItemStatus("OFF");
-				}
+			//build an output string
+			std::string output;
+			output += menuItems.at(i).getItemKeypress();
+			output += " - ";
+			for (int j = 0; j < menuItems.at(i).getOtherDisplayItems().size(); j++) {
+				output += menuItems.at(i).getOtherDisplayItems().at(j) + "\t";
 			}
+			//display the menu item
+			std::cout << output << std::endl;
 		}
-	}
+
 }
