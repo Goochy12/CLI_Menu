@@ -25,7 +25,8 @@ public:
 
 	T getMenuItemFromIndex(int index);
 
-	std::string getMenuItemDisplayName(int index);
+	void updateMenuItemToggle(int index, bool newToggle);
+	void updateMenuItemToggleDisplay(int index, std::string newToggleDisplay);
 
 	void display();
 };

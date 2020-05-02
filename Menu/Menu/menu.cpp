@@ -35,6 +35,14 @@ Menu::T Menu::getMenuItemFromIndex(int index) {
 	return menuItems.at(index);
 }
 
+void Menu::updateMenuItemToggle(int index, bool newToggle) {
+	menuItems.at(index).setItemToggle(newToggle);
+}
+
+void Menu::updateMenuItemToggleDisplay(int index, std::string newToggleDisplay) {
+	menuItems.at(index).setItemToggleDisplay(newToggleDisplay);
+}
+
 void Menu::display() {
 	//resize window - SetConsoleWindowInfo
 	//restrict window resize by user
