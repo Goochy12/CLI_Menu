@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "../MenuItem/menuItem.h"
+#include "MenuItem/menuItem.h"
 #include <vector>
 
 class Menu

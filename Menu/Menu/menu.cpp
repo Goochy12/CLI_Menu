@@ -1,5 +1,5 @@
 #include "menu.h"
-#include "../MenuItem/menuItem.h"
+#include "MenuItem/menuItem.h"
 #include <vector>
 #include <Windows.h>
 #include <string>

@@ -139,11 +139,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MenuItem\menuItem.cpp" />
+    <ClCompile Include="Menu\MenuItem\menuItem.cpp" />
     <ClCompile Include="Menu\menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MenuItem\menuItem.h" />
+    <ClInclude Include="Menu\MenuItem\menuItem.h" />
     <ClInclude Include="Menu\menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
